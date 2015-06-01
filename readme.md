@@ -4,22 +4,21 @@
 
 ### Background
 
-Your task is to build an application that shows a 
+Your task is to build an application that allows the user to see a list of puppies as well as add and see individual puppies.
 
-You should use an array of `puppies` to create and display puppies (while you are building this, think why an array may not be the best long term solution for storing data).
+You should use an array of `puppies` to create and display puppies (while you are building this, think why an array may not be the best long term solution for storing data). 
 
 ## Routes
 
 You'll need the following `puppies` routes:
 
-* `get` `/puppies` to display a summary  each puppy.
+* `get` `/` to display a summary  each puppy.
 * `get` `/puppies/new` to get a form to save a new puppy (each puppy should have an id which increments, a name and an age)
 * `get` `/puppies` to save an puppy
 * `get` `/puppies/:id` to find a puppy by id in the array of `puppies` and display it.
 
 You'll need the following `site` related routes:
 
-* `get` `/` serve the homepage of your site.
 * `get` `/about` serve a static about your page.
 * `get` `/contact` serve a static `contact` page.
 
