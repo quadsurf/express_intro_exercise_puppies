@@ -14,7 +14,7 @@ You'll need the following `puppies` routes:
 
 * `get` `/` to display information about all of the puppies.
 * `get` `/puppies/new` to get a form to save a new puppy (each puppy should have an id which increments, a name and an age)
-* `get` `/puppies` to save an puppy
+* `get` `/puppies` to save a puppy
 * `get` `/puppies/:id` to find a puppy by id in the array of `puppies` and display it.
 
 You'll need the following `site` related routes:
