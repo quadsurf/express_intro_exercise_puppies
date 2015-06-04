@@ -12,7 +12,7 @@ You should use an array of `puppies` to create and display puppies (while you ar
 
 You'll need the following `puppies` routes:
 
-* `get` `/` to display a summary  each puppy.
+* `get` `/` to display information about all of the puppies.
 * `get` `/puppies/new` to get a form to save a new puppy (each puppy should have an id which increments, a name and an age)
 * `get` `/puppies` to save an puppy
 * `get` `/puppies/:id` to find a puppy by id in the array of `puppies` and display it.
