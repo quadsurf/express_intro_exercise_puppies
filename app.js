@@ -11,6 +11,12 @@ puppies = [
 ]
 nextPuppyId = 2
 
+function findPuppyById(id) {
+  return puppies.filter(function(puppy) {
+    return puppy.id == id;
+  });
+}
+
 app.get('/', function(req, res) {
   res.render('site/index', {puppies: puppies});
 });
@@ -21,7 +27,15 @@ app.get('/puppies', function(req, res) {
 
 app.get('/puppies/new', function(req, res) {
   res.render('puppies/new');
-  console.log("new page loaded");
+});
+
+app.get('/puppies/:id', function(req, res) {
+  var currentPuppy = findPuppyById(req.params.id)[0];
+  if (currentPuppy) {
+    res.render('puppies/show', {puppy: currentPuppy});
+  } else {
+    res.render('site/404');
+  }
 });
 
 app.post('/puppies', function(req, res) {
