@@ -22,6 +22,13 @@ app.get('/', function(req, res) {
 });
 
 app.get('/puppies', function(req, res) {
+  var newPuppy = req.query;
+  puppies.push({
+    name: newPuppy.name,
+    age: newPuppy.age,
+    id: nextPuppyId
+  });
+  nextPuppyId++;
   res.render('site/index', {puppies: puppies});
 });
 
@@ -36,17 +43,6 @@ app.get('/puppies/:id', function(req, res) {
   } else {
     res.render('site/404');
   }
-});
-
-app.post('/puppies', function(req, res) {
-  var newPuppy = req.body;
-  puppies.push({
-    name: newPuppy.name,
-    age: newPuppy.age,
-    id: nextPuppyId
-  });
-  nextPuppyId++;
-  res.render('site/index', {puppies: puppies});
 });
 
 app.listen(3000, function () {
