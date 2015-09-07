@@ -4,6 +4,8 @@ var express = require('express'),
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({extended: true})); // Comment this out and input fields are undefined
+
 
 puppies = [
   {name: "Whiskey", age: 2, id: 1}
@@ -20,7 +22,7 @@ app.get('/', function(req, res) {
   res.render('site/index', {puppies: puppies});
 });
 
-app.get('/puppies', function(req, res) {
+app.post('/puppies', function(req, res) {
   var newPuppy = req.query;
   if (newPuppy.name) {
     puppies.push({
