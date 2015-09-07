@@ -16,12 +16,12 @@
   <table class="table table-bordered table-striped table-hover text-center">
     <thead>
       <th class="text-center">Puppy Name</th>
-      <th class="text-center">Puppy Aage</th>
+      <th class="text-center">Puppy Age</th>
     </thead>
     <tbody>
       <% puppies.forEach(function(puppy) { %>
         <tr>
-          <td><%= puppy.name %></td>
+          <td><a href="/puppies/<%= puppy.id %>"><%= puppy.name %></a></td>
           <td><%= puppy.age %></td>
         </tr>
       <% }) %>
