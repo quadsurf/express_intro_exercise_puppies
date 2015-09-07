@@ -4,7 +4,6 @@ var express = require('express'),
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({extended: true})); // Comment this out and input fields are undefined
 
 puppies = [
   {name: "Whiskey", age: 2, id: 1}
