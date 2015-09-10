@@ -45,6 +45,14 @@ app.get('/puppies/:id', function(req, res) {
   }
 });
 
+app.get('/about', function(req, res) {
+  res.render('site/about');
+});
+
+app.get('/contact', function(req, res) {
+  res.render('site/contact');
+});
+
 app.listen(3000, function () {
   console.log("Starting a server on localhost:3000");
 });
