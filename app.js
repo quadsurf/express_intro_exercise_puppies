@@ -16,7 +16,11 @@ function findPuppyById(id) {
 }
 
 app.get('/', function(req, res) {
-  res.render('site/index', {puppies: puppies});
+  res.render('index', {puppies: puppies});
+});
+
+app.get('/puppies/new', function(req, res) {
+  res.render('puppies/new');
 });
 
 app.get('/puppies', function(req, res) {
@@ -29,11 +33,7 @@ app.get('/puppies', function(req, res) {
     });
     nextPuppyId++;
   }
-  res.render('site/index', {puppies: puppies});
-});
-
-app.get('/puppies/new', function(req, res) {
-  res.render('puppies/new');
+  res.render('index', {puppies: puppies});
 });
 
 app.get('/puppies/:id', function(req, res) {
@@ -53,7 +53,7 @@ app.get('/contact', function(req, res) {
   res.render('site/contact');
 });
 
-app.listen(3000, function () {
-  console.log("Starting a server on localhost:3000");
+app.listen(4000, function () {
+  console.log("Starting a server on localhost:4000");
 });
 
