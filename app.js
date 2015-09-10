@@ -1,6 +1,5 @@
 var express = require('express'),
-  app = express(),
-  bodyParser = require("body-parser");
+  app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
