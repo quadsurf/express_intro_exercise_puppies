@@ -6,7 +6,6 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true})); // Comment this out and input fields are undefined
 
-
 puppies = [
   {name: "Whiskey", age: 2, id: 1}
 ]
@@ -19,10 +18,14 @@ function findPuppyById(id) {
 }
 
 app.get('/', function(req, res) {
-  res.render('site/index', {puppies: puppies});
+  res.render('index', {puppies: puppies});
 });
 
-app.post('/newPup', function(req, res) {
+app.get('/puppies/new', function(req, res) {
+  res.render('puppies/new');
+});
+
+app.post('/puppies', function(req, res) {
   var newPuppy = req.body;
   if (newPuppy.name) {
     puppies.push({
@@ -32,11 +35,7 @@ app.post('/newPup', function(req, res) {
     });
     nextPuppyId++;
   }
-  res.render('site/index', {puppies: puppies});
-});
-
-app.get('/puppies/new', function(req, res) {
-  res.render('puppies/new');
+  res.redirect('/');
 });
 
 app.get('/puppies/:id', function(req, res) {
@@ -48,7 +47,14 @@ app.get('/puppies/:id', function(req, res) {
   }
 });
 
+app.get('/about', function(req, res) {
+  res.render('site/about');
+});
+
+app.get('/contact', function(req, res) {
+  res.render('site/contact');
+});
+
 app.listen(3000, function () {
   console.log("Starting a server on localhost:3000");
 });
-
