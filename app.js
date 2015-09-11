@@ -33,7 +33,7 @@ app.get('/puppies', function(req, res) {
     });
     nextPuppyId++;
   }
-  res.render('index', {puppies: puppies});
+  res.redirect('/');
 });
 
 app.get('/puppies/:id', function(req, res) {
@@ -53,7 +53,7 @@ app.get('/contact', function(req, res) {
   res.render('site/contact');
 });
 
-app.listen(4000, function () {
-  console.log("Starting a server on localhost:4000");
+app.listen(3000, function () {
+  console.log("Starting a server on localhost:3000");
 });
 
