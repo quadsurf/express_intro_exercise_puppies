@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
   res.render('site/index', {puppies: puppies});
 });
 
-app.post('/puppies', function(req, res) {
+app.post('/newPup', function(req, res) {
   var newPuppy = req.body;
   if (newPuppy.name) {
     puppies.push({
