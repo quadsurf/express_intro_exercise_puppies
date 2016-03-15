@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add a Puppy!</title>
+  <link rel="stylesheet" href="/stylesheets/app.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+</head>
+<body class="container-fluid">
+  <h1 class="text-center">Puppy #<%= puppy.id %></h1>
+
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <div class="jumbotron text-center">
+        <label for="name">Puppy Name</label>
+        <div><%= puppy.name %></div>
+        <label for="age">Puppy Age</label>
+        <div><%= puppy.age %></div>
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <a href = "/" class="btn btn-default">
+              TAKE ME BACK TO ALL THE PUPPIEZ
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>
