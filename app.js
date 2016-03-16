@@ -57,4 +57,7 @@ app.listen(3000, function () {
   console.log("Starting a server on localhost:3000");
 });
 
-module.exports = app;
+module.exports = {
+  app,
+  puppies
+}
