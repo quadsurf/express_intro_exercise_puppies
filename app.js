@@ -1,3 +1,7 @@
 var app;
+var puppies = [];
 
-module.exports = app;
+module.exports = {
+  app,
+  puppies
+};
