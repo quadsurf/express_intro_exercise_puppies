@@ -14,7 +14,7 @@ You'll need the following `puppies` routes:
 
 * `get` `/` to display information about all of the puppies.
 * `get` `/puppies/new` to get a form to save a new puppy (each puppy should have an id which increments, a name and an age)
-* `get` `/puppies` to save a puppy
+* `get` `/puppies` to save a puppy to your `puppies` array.
 * `get` `/puppies/:id` to find a puppy by id in the array of `puppies` and display it.
 
 You'll need the following `site` related routes:
@@ -26,12 +26,10 @@ You'll need the following `site` related routes:
 
 Start your node application by using the same steps we did in class:
 
-- make a folder for your project
-- create an app.js file
-- add a package json using the `npm init` command (hit the 'enter' key through all the prompts)
-- create a `.gitignore` file and make sure `node_modules` are not tracked by git
-- initialize a git repository and make your first commit
+- fork and clone this repository
+- run `npm install` to install dependencies
 - make sure you have a `views` folder for your application (you will want to have subfolders for your site views and puppies views)
+- make your first commit!
 - Start in your app.js by including the proper dependencies and middleware
 
 When you're done - give this puppy a high five!
