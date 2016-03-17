@@ -4,10 +4,8 @@ var app = express();
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
-var puppies = [
-  {name: "Whiskey", age: 2, id: 1}
-];
-var nextPuppyId = 2;
+var puppies = [];
+var nextPuppyId = 1;
 
 function findPuppyById(id) {
   return puppies.filter(function(puppy) {
