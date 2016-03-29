@@ -42,3 +42,4 @@ When you're done - give this puppy a high five!
 - Include some navigation links to help the user navigate the site.
 - When creating a puppy, allow the user to include a link to an image for the puppy and display that image when the puppies are listed.
 - Try and figure out how to add css/javascript to your page (this will involve looking at the express documentation for `express.static` and understanding what `__dirname` is)
+- Issuing a GET request to add puppies to the array is a little strange. Usually POST requests handle the creation of new data on our server. But in order to make POST requests work in Express, you'll need to install a module called [Body parser](https://github.com/expressjs/body-parser). Research this module and refactor your code to change your GET to "/puppies" to a POST to "/puppies". 
