@@ -2,7 +2,7 @@
   "name": "express_intro_exercise",
   "version": "1.0.0",
   "description": "![http://www.unitedwaynorman.org/sites/unitedwaynorman.org/files/cutepuppy.jpg](http://www.unitedwaynorman.org/sites/unitedwaynorman.org/files/cutepuppy.jpg)",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "mocha"
   },
